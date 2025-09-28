@@ -1,6 +1,6 @@
 {
   "name": "nx-cdk-deploy",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A toolkit to scaffold and manage AWS CDK deployments for microservices inside an Nx monorepo.",
   "dependencies": {
     "@nx/devkit": "^21.5.3"
@@ -9,5 +9,10 @@
     "typescript": "^5.5.3",
     "@types/node": "^24.5.2"
   },
-  "private": true
+  "author": "Muhammad Hamza Shahzad",
+  "repository": {
+    "url": "https://github.com/mhshahzad/Nx-CDK-Deploy"
+  },
+  "license": "MIT",
+  "keywords": ["nx", "cdk", "aws", "infrastructure", "deployment", "microservices", "monorepo"]
 }
