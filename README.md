@@ -1,9 +1,8 @@
 # Nx CDK Plugin
 
-[![npm version](https://img.shields.io/npm/v/nx-cdk-deploy-deploy)](https://www.npmjs.com/package/nx-cdk-deploy-deploy)  
-[![build status](https://github.com/your-org/nx-cdk-deploy/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/nx-cdk-deploy-deploy/actions)  
-[![license](https://img.shields.io/github/license/mhshahzad/nx-cdk-deploy-deploy
-)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/nx-cdk-deploy)](https://www.npmjs.com/package/nx-cdk-deploy)  
+[![build status](https://github.com/your-org/nx-cdk-deploy/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/nx-cdk-deploy/actions)  
+[![license](https://img.shields.io/github/license/mhshahzad/nx-cdk-deploy)](LICENSE)
 
 A powerful Nx plugin that seamlessly integrates AWS Cloud Development Kit (CDK) into your Nx monorepo. Build, deploy, and manage AWS infrastructure for microservices with reusable presets, modular resource bundles, and environment-aware configurations.
 
@@ -253,8 +252,8 @@ apps/my-service/
 
 Environment-specific settings are managed through context files:
 
+_cdk.context.dev.json_
 ```json
-// cdk.context.dev.json
 {
   "environment": "dev",
   "region": "us-east-1",
@@ -265,8 +264,8 @@ Environment-specific settings are managed through context files:
 ```
 
 
+_cdk.context.prod.json_
 ```json
-// cdk.context.prod.json
 {
   "environment": "prod",
   "region": "us-west-2", 
@@ -498,8 +497,8 @@ npx cdk context --app "npx nx build orders && node dist/apps/orders/infra/app.js
 ### Getting Help
 
 - 📚 [AWS CDK Documentation](https://docs.aws.amazon.com/cdk/)
-- 🐛 [Report Issues](https://github.com/mhshahzad/nx-cdk-deploy-deploy/issues)
-- 💬 [Community Discussions](https://github.com/mhshahzad/nx-cdk-deploy-deploy/discussions)
+- 🐛 [Report Issues](https://github.com/mhshahzad/nx-cdk-deploy/issues)
+- 💬 [Community Discussions](https://github.com/mhshahzad/nx-cdk-deploy/discussions)
 - 📧 [Contact Support](mailto:muhammad@mhshahzad.tech)
 
 ---
