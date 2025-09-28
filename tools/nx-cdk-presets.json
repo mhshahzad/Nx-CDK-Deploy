@@ -1,0 +1,18 @@
+{
+  "event-service": {
+    "description": "Lambda + API Gateway + DynamoDB + SNS + SQS",
+    "resources": ["api-service", "dynamodb", "sns-sqs"]
+  },
+  "storage-service": {
+    "description": "Lambda + API Gateway + S3",
+    "resources": ["api-service", "s3"]
+  },
+  "worker-service": {
+    "description": "Lambda worker + SQS + DynamoDB",
+    "resources": ["api-service-no-api", "sns-sqs", "dynamodb"]
+  },
+  "custom-preset": {
+    "description": "Your own combo",
+    "resources": ["api-service", "dynamodb", "s3", "sns-sqs"]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "title": "Deploy executor",
+  "type": "object",
+  "properties": {
+    "stack": {
+      "type": "string",
+      "description": "CDK stack name to deploy"
+    },
+    "env": {
+      "type": "string",
+      "description": "Deployment environment (dev/staging/prod)",
+      "default": "dev"
+    },
+    "requireApproval": {
+      "type": "string",
+      "enum": ["never", "any-change", "broadening"],
+      "description": "CDK approval level",
+      "default": "never"
+    }
+  },
+  "required": ["stack"]
+}

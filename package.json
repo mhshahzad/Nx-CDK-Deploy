@@ -1,0 +1,13 @@
+{
+  "name": "nx-cdk-deploy",
+  "version": "1.0.0",
+  "description": "A toolkit to scaffold and manage AWS CDK deployments for microservices inside an Nx monorepo.",
+  "dependencies": {
+    "@nx/devkit": "^21.5.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "@types/node": "^24.5.2"
+  },
+  "private": true
+}

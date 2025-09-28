@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "title": "Destroyer Generator",
+  "description": "Generates support for environment-aware CDK destroy command",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "The name of the project to configure destroy for."
+    },
+    "env": {
+      "type": "string",
+      "description": "The environment to target (e.g. dev, staging, prod).",
+      "default": "dev"
+    },
+    "force": {
+      "type": "boolean",
+      "description": "Whether to force destroy without confirmation.",
+      "default": true
+    }
+  },
+  "required": ["project"]
+}
