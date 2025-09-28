@@ -1,5 +1,3 @@
-Looking at the current README.md, I can see it has good structure but needs improvement in several areas. Let me enhance the documentation to make it more comprehensive, clearer, and better organized.
-
 # Nx CDK Plugin
 
 [![npm version](https://img.shields.io/npm/v/nx-cdk-deploy)](https://www.npmjs.com/package/nx-cdk-deploy)  
