@@ -1,8 +1,8 @@
 # Nx CDK Plugin
 
-[![npm version](https://img.shields.io/npm/v/nx-cdk-deploy)](https://www.npmjs.com/package/nx-cdk-deploy)  
-[![build status](https://github.com/your-org/nx-cdk/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/nx-cdk-deploy/actions)  
-[![license](https://img.shields.io/github/license/mhshahzad/nx-cdk-deploy
+[![npm version](https://img.shields.io/npm/v/nx-cdk-deploy-deploy)](https://www.npmjs.com/package/nx-cdk-deploy-deploy)  
+[![build status](https://github.com/your-org/nx-cdk-deploy/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/nx-cdk-deploy-deploy/actions)  
+[![license](https://img.shields.io/github/license/mhshahzad/nx-cdk-deploy-deploy
 )](LICENSE)
 
 A powerful Nx plugin that seamlessly integrates AWS Cloud Development Kit (CDK) into your Nx monorepo. Build, deploy, and manage AWS infrastructure for microservices with reusable presets, modular resource bundles, and environment-aware configurations.
@@ -50,7 +50,7 @@ A powerful Nx plugin that seamlessly integrates AWS Cloud Development Kit (CDK) 
 ### Install the Plugin
 
 ```bash
-npm install --save-dev @nx-cdk/plugin aws-cdk-lib constructs
+npm install --save-dev @nx-cdk-deploy/plugin aws-cdk-lib constructs
 ```
 
 ---
@@ -64,7 +64,7 @@ Get up and running in minutes with a complete microservice deployment.
 Create an event-driven microservice with Lambda, API Gateway, DynamoDB, SNS, and SQS:
 
 ```shell script
-nx g @nx-cdk/preset event-service orders --env=dev
+nx g @nx-cdk-deploy/preset event-service orders --env=dev
 ```
 
 
@@ -144,13 +144,13 @@ nx destroy orders --env=dev
 
 ```shell script
 # Event-driven service for order processing
-nx g @nx-cdk/preset event-service orders --env=dev
+nx g @nx-cdk-deploy/preset event-service orders --env=dev
 
 # Storage service for document management
-nx g @nx-cdk/preset storage-service documents --env=dev
+nx g @nx-cdk-deploy/preset storage-service documents --env=dev
 
 # Background worker for data processing
-nx g @nx-cdk/preset worker-service data-processor --env=dev
+nx g @nx-cdk-deploy/preset worker-service data-processor --env=dev
 ```
 
 
@@ -163,7 +163,7 @@ nx g @nx-cdk/preset worker-service data-processor --env=dev
 Generate complete microservice infrastructure:
 
 ```shell script
-nx g @nx-cdk/preset <preset-name> <service-name> [options]
+nx g @nx-cdk-deploy/preset <preset-name> <service-name> [options]
 ```
 
 
@@ -178,13 +178,13 @@ Add individual resources to existing services:
 
 ```shell script
 # Add multiple resources at once
-nx g @nx-cdk/resources <service-name> --add=s3,dynamodb
+nx g @nx-cdk-deploy/resources <service-name> --add=s3,dynamodb
 
 # Add individual resources
-nx g @nx-cdk/api-service <service-name>
-nx g @nx-cdk/dynamodb <service-name>
-nx g @nx-cdk/sns-sqs <service-name>
-nx g @nx-cdk/s3 <service-name>
+nx g @nx-cdk-deploy/api-service <service-name>
+nx g @nx-cdk-deploy/dynamodb <service-name>
+nx g @nx-cdk-deploy/sns-sqs <service-name>
+nx g @nx-cdk-deploy/s3 <service-name>
 ```
 
 
@@ -373,13 +373,13 @@ apps/
 
 ```shell script
 # Create order processing service
-nx g @nx-cdk/preset event-service orders --env=dev
+nx g @nx-cdk-deploy/preset event-service orders --env=dev
 
 # Create notification worker
-nx g @nx-cdk/preset worker-service notifications --env=dev
+nx g @nx-cdk-deploy/preset worker-service notifications --env=dev
 
 # Create user management service
-nx g @nx-cdk/preset storage-service users --env=dev
+nx g @nx-cdk-deploy/preset storage-service users --env=dev
 
 # Deploy all services
 nx run-many --target=deploy --projects=orders,notifications,users --env=dev
@@ -390,7 +390,7 @@ nx run-many --target=deploy --projects=orders,notifications,users --env=dev
 
 ```shell script
 # Add S3 and DynamoDB to an existing service
-nx g @nx-cdk/resources orders --add=s3,dynamodb
+nx g @nx-cdk-deploy/resources orders --add=s3,dynamodb
 
 # Deploy the updated service
 nx deploy orders --env=dev
@@ -498,8 +498,8 @@ npx cdk context --app "npx nx build orders && node dist/apps/orders/infra/app.js
 ### Getting Help
 
 - 📚 [AWS CDK Documentation](https://docs.aws.amazon.com/cdk/)
-- 🐛 [Report Issues](https://github.com/mhshahzad/nx-cdk-deploy/issues)
-- 💬 [Community Discussions](https://github.com/mhshahzad/nx-cdk-deploy/discussions)
+- 🐛 [Report Issues](https://github.com/mhshahzad/nx-cdk-deploy-deploy/issues)
+- 💬 [Community Discussions](https://github.com/mhshahzad/nx-cdk-deploy-deploy/discussions)
 - 📧 [Contact Support](mailto:muhammad@mhshahzad.tech)
 
 ---
@@ -560,7 +560,7 @@ npm install
 ```shell script
 npx create-nx-workspace test-workspace --preset=empty
    cd test-workspace
-   npm install ../nx-cdk-plugin
+   npm install ../nx-cdk-deploy-plugin
 ```
 
 
@@ -568,7 +568,7 @@ npx create-nx-workspace test-workspace --preset=empty
 
 ```shell script
 # Test generator
-nx g @nx-cdk/preset event-service test-service --env=dev
+nx g @nx-cdk-deploy/preset event-service test-service --env=dev
 
 # Test executor  
 nx deploy test-service --env=dev --dryRun
